@@ -1,2 +1,2 @@
 // apps/web/components/modals/index.ts
-export { CTAModal } from "./CTAModal";
+export { CTAModal } from './CTAModal';

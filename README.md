@@ -60,10 +60,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 ## Form Example
 
 ```ts
-import {
-  energyAssessmentSchema,
-  EnergyAssessmentInput,
-} from "@energy-platform/zod-schemas";
+import { energyAssessmentSchema, EnergyAssessmentInput } from '@energy-platform/zod-schemas';
 ```
 
 ## Best Practices

@@ -3,7 +3,7 @@
 import { useState } from 'react';
 
 import { Monitor, FileDown, ArrowRight, CheckCircle } from 'lucide-react';
-import { BenchmarkingForm } from '@/features';
+import { BenchmarkingForm } from './BenchmarkingForm';
 
 export const BenchmarkingDataCards = () => {
   const [showForm, setShowForm] = useState(false);

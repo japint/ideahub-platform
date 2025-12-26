@@ -1,7 +1,6 @@
 export const safeScrollToElement = (targetId: string): boolean => {
   // Validate targetId with comprehensive sanitization
-  if (!targetId || typeof targetId !== 'string' || 
-      !/^[a-zA-Z][a-zA-Z0-9_-]*$/.test(targetId)) {
+  if (!targetId || typeof targetId !== 'string' || !/^[a-zA-Z][a-zA-Z0-9_-]*$/.test(targetId)) {
     console.warn('Invalid targetId provided for scrolling');
     return false;
   }
@@ -15,6 +14,6 @@ export const safeScrollToElement = (targetId: string): boolean => {
   } catch (error) {
     console.error('Error scrolling to element:', error);
   }
-  
+
   return false;
 };

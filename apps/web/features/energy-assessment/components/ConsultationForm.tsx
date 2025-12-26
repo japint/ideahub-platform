@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import { useState } from "react";
-import { Button } from "@invictus/ui";
+import { useState } from 'react';
+import { Button } from '@invictus/ui';
 
 interface ConsultationFormProps {
   onComplete?: () => void;
@@ -14,9 +14,7 @@ export const ConsultationForm = ({ onComplete }: ConsultationFormProps) => {
   if (isSubmitted) {
     return (
       <div className="text-center p-8 bg-enterprise-50 rounded-lg">
-        <h3 className="text-xl font-bold text-enterprise-800">
-          Booking Confirmed
-        </h3>
+        <h3 className="text-xl font-bold text-enterprise-800">Booking Confirmed</h3>
         <p className="text-enterprise-600 mt-2">
           Our engineers will review the Mukuyu Field data and contact you.
         </p>
@@ -30,18 +28,14 @@ export const ConsultationForm = ({ onComplete }: ConsultationFormProps) => {
   return (
     <div className="max-w-5xl mx-auto">
       <div className="text-center mb-8">
-        <h2 className="text-2xl sm:text-3xl font-bold">
-          Schedule a Consultation
-        </h2>
+        <h2 className="text-2xl sm:text-3xl font-bold">Schedule a Consultation</h2>
       </div>
 
       <div className="grid lg:grid-cols-2 gap-8">
         {/* Calendar Column */}
         <div className="flex flex-col items-center">
           {/* Add your Calendar component here */}
-          <p className="text-muted-foreground italic">
-            Calendar Selection Mock
-          </p>
+          <p className="text-muted-foreground italic">Calendar Selection Mock</p>
         </div>
 
         {/* Form Details Column */}

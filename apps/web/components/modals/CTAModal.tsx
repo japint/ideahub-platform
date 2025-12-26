@@ -1,5 +1,5 @@
 // apps/web/components/modals/CTAModal.tsx
-import React from "react";
+import React from 'react';
 
 export const CTAModal = ({
   open,

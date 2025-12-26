@@ -1,1 +1,1 @@
-export * from "@energy-platform/zod-schemas/components";
+export * from '@energy-platform/zod-schemas/components';
