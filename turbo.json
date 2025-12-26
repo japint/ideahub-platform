@@ -1,0 +1,7 @@
+{
+  "pipeline": {
+    "build": ["^build"],
+    "lint": ["apps/web:lint"],
+    "dev": ["apps/web:dev"]
+  }
+}

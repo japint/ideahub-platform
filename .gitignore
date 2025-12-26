@@ -1,0 +1,58 @@
+### ENVIRONMENT FILES ###
+.env
+.env.*
+
+### LOGS ###
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+### DEPENDENCIES ###
+node_modules/
+
+### NEXT.JS & BUILD OUTPUT ###
+.next/
+dist/
+dist-ssr/
+out/
+coverage/
+
+### OS & IDE FILES ###
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+!.vscode/extensions.json
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+### MONOREPO & PACKAGE MANAGER ###
+.pnpm/
+.pnpm-debug.log*
+.pnpm-workspace-state-v1.json
+.cache/
+
+### STATIC & COMPRESSED ASSETS ###
+*.gz
+*.zip
+*.tar
+*.tgz
+*.7z
+*.rar
+
+### TEST OUTPUT ###
+coverage/
+
+### LOCAL CONFIGS ###
+*.local
+
+### MISC ###
+*.tmp
+*.bak
+*.swp
