@@ -3,7 +3,7 @@ import { Button } from '@invictus/ui';
 import Link from 'next/link';
 import { ArrowRight, FileText, Calendar, Mail } from 'lucide-react';
 import { CTAModal } from '@/components/modals';
-import { useCTAModal } from '../sections/useCTAModal';
+import { useCTAModal } from './useCTAModal';
 import { ConsultationForm, EnergyAssessment } from '@/features/energy-assessment';
 
 export const CTASection = () => {

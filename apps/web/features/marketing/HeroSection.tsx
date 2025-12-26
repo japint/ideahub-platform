@@ -1,3 +1,4 @@
+'use client';
 export const HeroSection = () => {
   return (
     <section className="relative py-20 lg:py-32 px-4 sm:px-6 lg:px-8 bg-secondary/50">

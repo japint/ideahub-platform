@@ -1,12 +1,9 @@
 import { CONTENT_SECTIONS } from '@/constants/content';
-import {
-  ContentSection,
-  CTASection,
-  Footer,
-  Header,
-  HeroSection,
-  RoadmapSection,
-} from '@/features';
+
+import { RoadmapSection } from '@/features';
+import { ClientMarketing } from '@/components/ClientMarketing';
+
+import { Footer, Header } from '@/components';
 
 export default function Home() {
   return (
@@ -17,15 +14,8 @@ export default function Home() {
       <div className="h-16" />
 
       <main>
-        <HeroSection />
         <RoadmapSection />
-
-        {/* Content sections */}
-        {CONTENT_SECTIONS.map((section, index) => (
-          <ContentSection key={section.id} section={section} isAlternate={index % 2 === 1} />
-        ))}
-
-        <CTASection />
+        <ClientMarketing contentSections={CONTENT_SECTIONS} />
       </main>
 
       <Footer />

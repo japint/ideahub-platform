@@ -1,15 +1,15 @@
 'use client';
 
+import {} from '@/features';
+import { ErrorBoundary } from '@/components/ErrorBoundary';
+import {} from '@/features';
+import { Footer, Header } from '@/components';
 import {
-  Header,
-  Footer,
+  BenchmarkingDataCards,
   BenchmarkingHero,
   BenchmarkingHowItWorks,
   BenchmarkingTrust,
-  BenchmarkingDataCards,
-} from '@/features';
-import { ErrorBoundary } from '@/components/ErrorBoundary';
-import {} from '@/features';
+} from '@/features/benchmarking';
 
 export default function Benchmarking() {
   return (
