@@ -8,14 +8,15 @@ export const Footer = () => {
           {/* Logo */}
           <div className="flex items-center gap-3">
             <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-sm">E</span>
+              <span className="text-primary-foreground font-bold text-sm">IHS</span>
             </div>
-            <span className="font-semibold text-foreground">EnergyPro</span>
+            <span className="font-semibold text-foreground">IdeaHub Studio</span>
           </div>
 
           {/* Copyright */}
-          <p className="text-sm text-muted-foreground">© 2024 EnergyPro. All rights reserved.</p>
-
+          <p className="text-sm text-muted-foreground">
+            © {new Date().getFullYear()} IdeaHub Studio. All rights reserved.
+          </p>
           {/* Links */}
           <div className="flex items-center gap-6">
             <a

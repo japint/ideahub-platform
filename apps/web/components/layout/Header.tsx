@@ -12,9 +12,9 @@ export const Header = () => {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
             <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-sm">E</span>
+              <span className="text-primary-foreground font-bold text-sm">IHS</span>
             </div>
-            <span className="font-semibold text-foreground">IDEAHUB STUDIO</span>
+            <span className="font-semibold text-foreground">IdeaHub Studio</span>
           </Link>
 
           {/* Navigation */}

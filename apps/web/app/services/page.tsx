@@ -1,4 +1,4 @@
-import { Header, Footer } from '@/features';
+import { Footer, Header } from '@/components';
 import { ErrorBoundary } from '@/components/ErrorBoundary';
 
 export default function Services() {
