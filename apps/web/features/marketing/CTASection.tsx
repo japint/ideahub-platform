@@ -2,12 +2,9 @@
 import { Button } from '@invictus/ui';
 import Link from 'next/link';
 import { ArrowRight, FileText, Calendar, Mail } from 'lucide-react';
-import { CTAModal } from '@/components/modals';
-import { useCTAModal } from './useCTAModal';
-import { ConsultationForm, EnergyAssessment } from '@/features/energy-assessment';
+// Modal logic removed; now using direct links for both actions
 
 export const CTASection = () => {
-  const { modal, openModal, closeModal } = useCTAModal();
   return (
     <section className="py-24 bg-primary">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -19,24 +16,23 @@ export const CTASection = () => {
           your organization.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
-          <Button
-            size="lg"
-            className="bg-accent hover:bg-accent/90 text-white font-medium px-8"
-            onClick={() => openModal('assessment')}
-          >
-            <FileText className="w-4 h-4 mr-2" />
-            Request an Assessment
-            <ArrowRight className="w-4 h-4 ml-2" />
-          </Button>
-          <Button
-            size="lg"
-            variant="outline"
-            className="border-enterprise-400 bg-transparent text-white hover:bg-white hover:text-enterprise-800"
-            onClick={() => openModal('consultation')}
-          >
-            <Calendar className="w-4 h-4 mr-2" />
-            Schedule a Consultation
-          </Button>
+          <Link href="/energy-assessment" passHref legacyBehavior>
+            <Button size="lg" className="bg-accent hover:bg-accent/90 text-white font-medium px-8">
+              <FileText className="w-4 h-4 mr-2" />
+              Request an Assessment
+              <ArrowRight className="w-4 h-4 ml-2" />
+            </Button>
+          </Link>
+          <Link href="/consultation" passHref legacyBehavior>
+            <Button
+              size="lg"
+              variant="outline"
+              className="border-enterprise-400 bg-transparent text-white hover:bg-white hover:text-enterprise-800"
+            >
+              <Calendar className="w-4 h-4 mr-2" />
+              Schedule a Consultation
+            </Button>
+          </Link>
         </div>
         <Link
           href="/contact"
@@ -45,12 +41,6 @@ export const CTASection = () => {
           <Mail className="w-4 h-4 mr-2" />
           Or contact us with questions
         </Link>
-        {/* The Reusable Modal Shell */}
-        <CTAModal open={modal !== null} onClose={closeModal}>
-          {/* Conditional Content based on the hook's state */}
-          {modal === 'assessment' && <EnergyAssessment onComplete={closeModal} />}
-          {modal === 'consultation' && <ConsultationForm onComplete={closeModal} />}
-        </CTAModal>
       </div>
     </section>
   );
