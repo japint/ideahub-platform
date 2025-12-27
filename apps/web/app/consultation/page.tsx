@@ -77,6 +77,15 @@ export default function ConsultationPage() {
           ) : (
             /* SCHEDULING VIEW */
             <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
+              <div className="mb-6">
+                <Link
+                  href="/"
+                  className="inline-flex items-center text-sm font-medium text-accent hover:underline mb-4"
+                >
+                  <ArrowLeft className="w-4 h-4 mr-1" />
+                  Back
+                </Link>
+              </div>
               <div className="text-center mb-12">
                 <h1 className="text-4xl font-bold tracking-tight text-foreground mb-4">
                   Schedule a Consultation
