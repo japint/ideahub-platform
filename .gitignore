@@ -19,6 +19,10 @@ dist/
 dist-ssr/
 out/
 coverage/
+build/
+*.pack.gz
+*-update.js
+*-update.json
 
 ### OS & IDE FILES ###
 .DS_Store
@@ -56,3 +60,19 @@ coverage/
 *.tmp
 *.bak
 *.swp
+
+### TURBO REPO ###
+.turbo/
+
+### PRISMA ###
+# Ignore the local SQLite dev database if you use one
+*.db
+*.db-journal
+
+### TYPESCRIPT ###
+*.tsbuildinfo
+next-env.d.ts
+
+### MACOS FOLDER ATTR ###
+.AppleDouble
+.LSOverride
