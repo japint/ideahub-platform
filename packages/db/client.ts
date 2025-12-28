@@ -1,5 +1,5 @@
+import 'server-only'; // ✅ This locks this file to the server
 import { PrismaClient } from '@prisma/client';
-import { PrismaPg } from '@prisma/adapter-pg';
 import { Pool } from 'pg';
 
 const prismaClientSingleton = () => {

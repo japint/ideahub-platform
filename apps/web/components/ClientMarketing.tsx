@@ -1,7 +1,20 @@
 'use client';
 import { HeroSection, CTASection, ContentSection } from '@/features/marketing';
 
-export function ClientMarketing({ contentSections }) {
+type ContentSectionType = {
+  id: string;
+  title: string;
+  subtitle: string;
+  description: string;
+  icon: string;
+  // add other properties as needed
+};
+
+interface ClientMarketingProps {
+  contentSections: ContentSectionType[];
+}
+
+export function ClientMarketing({ contentSections }: ClientMarketingProps) {
   return (
     <>
       <HeroSection />

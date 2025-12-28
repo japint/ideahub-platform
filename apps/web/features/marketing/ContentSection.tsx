@@ -1,7 +1,7 @@
 'use client';
 
 // 1. Rename the type import to avoid collision
-import type { ContentSection as ContentSectionType } from '@energy-platform/types/components';
+import type { ContentSection as ContentSectionType } from '@invictus/types';
 import React from 'react';
 
 interface Props {

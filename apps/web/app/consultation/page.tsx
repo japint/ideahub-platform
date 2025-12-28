@@ -121,7 +121,7 @@ export default function ConsultationPage() {
                       mode="single"
                       selected={date}
                       onSelect={setDate}
-                      disabled={(date) =>
+                      disabled={(date: Date) =>
                         date < new Date() || date.getDay() === 0 || date.getDay() === 6
                       }
                       className="rounded-md border pointer-events-auto"
