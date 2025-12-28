@@ -80,3 +80,4 @@ next-env.d.ts
 ### MACOS FOLDER ATTR ###
 .AppleDouble
 .LSOverride
+.vercel
