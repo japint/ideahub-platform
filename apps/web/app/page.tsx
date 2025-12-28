@@ -15,7 +15,12 @@ export default function Home() {
 
       <main>
         <RoadmapSection />
-        <ClientMarketing contentSections={CONTENT_SECTIONS} />
+        <ClientMarketing
+          contentSections={CONTENT_SECTIONS.map((section) => ({
+            ...section,
+            icon: typeof section.icon === 'string' ? section.icon : '',
+          }))}
+        />
       </main>
 
       <Footer />

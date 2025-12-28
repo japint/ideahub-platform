@@ -1,7 +1,6 @@
 'use client';
 
-import { useActionState } from 'react'; // In Next 14.2+, useActionState is here
-import { useFormStatus } from 'react-dom';
+import { useFormStatus, useFormState } from 'react-dom';
 import { createProject, type ActionState } from '../../actions/create-project';
 import { Button, Input } from '@invictus/ui';
 
@@ -13,7 +12,7 @@ const initialState: ActionState = {
 
 export default function NewProjectPage() {
   // state will now have .success and .message with full type safety
-  const [state, formAction] = useActionState(createProject, initialState);
+  const [state, formAction] = useFormState(createProject, initialState);
 
   return (
     <div className="max-w-md mx-auto mt-10 p-6 bg-white rounded-xl shadow-md">

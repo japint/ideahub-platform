@@ -37,8 +37,9 @@ export async function createProject(
       success: true,
       message: 'Project created successfully!',
     };
-  } catch (error) {
-    console.error('Database Error:', error);
+  } catch (error: unknown) {
+    const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+    console.error('Database Error:', errorMessage);
     return {
       success: false,
       message: 'Database error: Failed to create project.',
