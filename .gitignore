@@ -1,6 +1,10 @@
 ### ENVIRONMENT FILES ###
 .env
-.env.*
+.env.local
+.env.production
+
+# BUT do NOT ignore the template
+!.env.example
 
 ### LOGS ###
 logs/
