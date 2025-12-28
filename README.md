@@ -1,4 +1,4 @@
-# IdeaHub Energy Platform ⚡
+# IdeaHub Platform ⚡
 
 A modern, scalable solution for energy management, built for teams to optimize, track, and manage energy initiatives with high type-safety and performance.
 
