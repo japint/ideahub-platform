@@ -24,6 +24,8 @@ A comprehensive energy management platform built with Next.js, TypeScript, and T
 - **Lucide React** - Icon library
 - **pnpm** - Monorepo and workspace management
 - **Turborepo** - Build orchestration
+- **Prisma** - Type-safe ORM for PostgreSQL
+- **pg** - PostgreSQL driver
 
 ## Key Features
 
@@ -34,6 +36,31 @@ A comprehensive energy management platform built with Next.js, TypeScript, and T
 - 🧑‍💻 Workspace packages for UI, types, and schemas
 - 📝 Multi-step forms with Zod validation and React Hook Form integration
 - 📦 Portable, reusable UI and schema packages
+
+## Getting Started
+
+## Database Setup (Optional)
+
+If you use the `packages/db` workspace package:
+
+Install database dependencies:
+
+```bash
+pnpm add @prisma/adapter-pg pg -w
+pnpm add -D @types/pg -w
+```
+
+Push your schema to the database:
+
+```bash
+pnpm --filter @invictus/db exec prisma db push
+```
+
+Seed the database (if a seed script exists):
+
+```bash
+pnpm --filter @invictus/db run seed
+```
 
 ## Getting Started
 
