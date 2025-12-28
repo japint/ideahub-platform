@@ -1,6 +1,6 @@
 'use client';
 
-import { Header, Footer } from '@/features';
+import { Footer, Header } from '@/components';
 import { ErrorBoundary } from '@/components/ErrorBoundary';
 import { BenchmarkingForm } from '@/features/benchmarking/components';
 

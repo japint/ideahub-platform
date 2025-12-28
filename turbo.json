@@ -1,7 +1,16 @@
 {
-  "pipeline": {
-    "build": ["^build"],
-    "lint": ["apps/web:lint"],
-    "dev": ["apps/web:dev"]
+  "$schema": "https://turbo.build/schema.json",
+  "tasks": {
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": [".next/**", "dist/**"]
+    },
+    "lint": {
+      "dependsOn": ["^lint"]
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true
+    }
   }
 }

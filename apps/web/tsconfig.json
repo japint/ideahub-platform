@@ -5,15 +5,16 @@
       "@/*": ["./*"],
       "@features/*": ["./features/*"],
       "@components/*": ["./components/*"],
+      /* ✅ Unified internal aliases pointing to package sources */
       "@invictus/ui": ["../../packages/ui/src"],
       "@invictus/db": ["../../packages/db"],
       "@invictus/zod-schemas": ["../../packages/zod-schemas"],
-      "@energy-platform/types/*": ["../../packages/types/src/*"]
+      "@invictus/types": ["../../packages/types/src"]
     },
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": false,
+    "strict": true /* 💡 Tip: Switch to true when team is ready for enterprise-grade safety */,
     "noEmit": true,
     "incremental": true,
     "esModuleInterop": true,

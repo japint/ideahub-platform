@@ -1,34 +1,53 @@
 // Prisma schema for Invictus Energy Solutions
-// Place this in packages/db/prisma/schema.prisma
+// Designed for Prisma 7 Standard
 
 generator client {
   provider = "prisma-client-js"
 }
 
 datasource db {
-  provider = "postgresql"
+  provider  = "postgresql"
+  url       = env("DATABASE_URL") // Transaction Mode (Port 6543) for the App
+  directUrl = env("DIRECT_URL") // Session Mode (Port 5432) for Migrations/Studio
 }
 
 model Project {
-  id        String   @id @default(uuid())
+  id        String        @id @default(uuid())
   name      String
-  status    String
+  status    ProjectStatus @default(DRAFT)
   assets    Asset[]
-  createdAt DateTime @default(now())
+  createdAt DateTime      @default(now())
+  updatedAt DateTime      @updatedAt
+
+  @@map("projects") // Professional practice: use lowercase table names in Postgres
 }
 
 model Asset {
   id        String          @id @default(uuid())
   name      String
   projectId String
-  project   Project         @relation(fields: [projectId], references: [id])
+  project   Project         @relation(fields: [projectId], references: [id], onDelete: Cascade)
   readings  EnergyReading[]
+
+  @@index([projectId])
+  @@map("assets")
 }
 
 model EnergyReading {
   id        String   @id @default(uuid())
   assetId   String
-  asset     Asset    @relation(fields: [assetId], references: [id])
+  asset     Asset    @relation(fields: [assetId], references: [id], onDelete: Cascade)
   value     Float
   timestamp DateTime @default(now())
+
+  @@index([assetId])
+  @@index([timestamp])
+  @@map("energy_readings")
+}
+
+enum ProjectStatus {
+  DRAFT
+  ACTIVE
+  COMPLETED
+  ARCHIVED
 }
