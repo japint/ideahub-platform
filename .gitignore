@@ -1,6 +1,10 @@
 ### ENVIRONMENT FILES ###
 .env
-.env.*
+.env.local
+.env.production
+
+# BUT do NOT ignore the template
+!.env.example
 
 ### LOGS ###
 logs/
@@ -76,3 +80,4 @@ next-env.d.ts
 ### MACOS FOLDER ATTR ###
 .AppleDouble
 .LSOverride
+.vercel
