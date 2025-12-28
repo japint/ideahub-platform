@@ -1,23 +1,23 @@
 'use client';
 
 export default function StagingBadge() {
-  // We use the custom variable we set in Vercel Settings
-  // Ensure you added NEXT_PUBLIC_IS_STAGING = true in Vercel for 'Preview' only
-  const isStaging = process.env.NEXT_PUBLIC_IS_STAGING === 'true';
+  // 1. Check the Vercel Environment (Preview = Staging)
+  // 2. Check the Branch Name (If branch is 'main', it's Staging)
+  const isStaging =
+    process.env.NEXT_PUBLIC_VERCEL_ENV === 'preview' ||
+    process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_REF === 'main';
 
-  // For debugging locally or in Vercel:
-  // console.log('Is Staging:', isStaging);
-
+  // If it's production or local dev (without the flag), don't show anything
   if (!isStaging) return null;
 
   return (
-    <div className="fixed top-6 left-6 z-[9999] pointer-events-none select-none">
-      <div className="bg-amber-600/90 backdrop-blur-sm text-white px-4 py-2 rounded-full text-xs font-bold shadow-2xl flex items-center gap-3 border border-amber-400/50">
-        <span className="relative flex h-3 w-3">
-          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-200 opacity-75"></span>
-          <span className="relative inline-flex rounded-full h-3 w-3 bg-white"></span>
+    <div className="fixed bottom-4 right-4 z-50">
+      <div className="flex items-center gap-2 rounded-full bg-amber-500 px-4 py-1.5 text-xs font-bold text-white shadow-lg animate-pulse">
+        <span className="relative flex h-2 w-2">
+          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-white opacity-75"></span>
+          <span className="relative inline-flex h-2 w-2 rounded-full bg-white"></span>
         </span>
-        <span className="tracking-widest uppercase">Staging Environment</span>
+        STAGING ENVIRONMENT
       </div>
     </div>
   );
