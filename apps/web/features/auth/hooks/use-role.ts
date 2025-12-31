@@ -1,7 +1,7 @@
 // Named export only
 'use client';
 import { useMemo } from 'react';
-import { Role } from '@energy-platform/zod-schemas';
+import { Role } from '@invictus/zod-schemas';
 
 export function useRole(user: { role: Role } | null, allowed: Role[]) {
   return useMemo(() => {
