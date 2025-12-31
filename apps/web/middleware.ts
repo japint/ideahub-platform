@@ -1,12 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { RoleEnum } from '@energy-platform/zod-schemas';
-
-// Define protected routes and required roles
-const protectedRoutes: Record<string, Array<(typeof RoleEnum.Enum)[number]>> = {
-  '/admin': ['ADMIN'],
-  '/engineer': ['ADMIN', 'ENGINEER'],
-  '/viewer': ['ADMIN', 'ENGINEER', 'VIEWER'],
-};
+import { protectedRoutes } from './features/auth/protected-routes';
 
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
@@ -26,7 +19,7 @@ export function middleware(request: NextRequest) {
     return NextResponse.redirect(new URL('/login', request.url));
   }
   const allowedRoles = protectedRoutes[match];
-  if (!allowedRoles.includes(user.role)) {
+  if (!user || !allowedRoles.includes(user.role as (typeof allowedRoles)[number])) {
     return NextResponse.redirect(new URL('/unauthorized', request.url));
   }
   return NextResponse.next();
