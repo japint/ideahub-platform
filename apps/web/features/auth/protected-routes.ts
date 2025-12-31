@@ -1,4 +1,4 @@
-import { RoleEnum } from '@energy-platform/zod-schemas';
+import { RoleEnum } from '@invictus/zod-schemas';
 
 // Map of protected routes to allowed roles
 export const protectedRoutes: Record<
