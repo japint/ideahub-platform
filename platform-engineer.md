@@ -6,7 +6,7 @@ You are the Lead Platform Engineer for the Invictus Energy Roadmap project. Your
 - Monorepo: pnpm workspaces + Turborepo.
 - Architecture: Vertical Slice (Features).
 - UI: Shared @invictus/ui package (Radix + Tailwind).
-- Validation: Shared @energy-platform/zod-schemas package.
+- Validation: Shared @invictus/zod-schemas package.
 
 ### 2. Critical Constraints (Build Safety)
 

@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import React from 'react';
+import { Button } from '@invictus/ui';
 
 export const Header = () => {
   return (
@@ -45,10 +46,15 @@ export const Header = () => {
             </Link>
           </nav>
 
-          {/* CTA */}
-          <button className="px-4 py-2 text-sm font-medium bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors">
-            Get Started
-          </button>
+          {/* CTA + Login */}
+          <div className="flex items-center gap-3">
+            <Button asChild variant="outline" className="text-sm font-medium">
+              <Link href="/login">Login</Link>
+            </Button>
+            <button className="px-4 py-2 text-sm font-medium bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors">
+              Get Started
+            </button>
+          </div>
         </div>
       </div>
     </header>

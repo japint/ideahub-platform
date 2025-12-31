@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  transpilePackages: ['@invictus/ui', '@energy-platform/zod-schemas'],
+  transpilePackages: ['@invictus/ui', '@invictus/zod-schemas'],
   experimental: {},
   async headers() {
     return [
