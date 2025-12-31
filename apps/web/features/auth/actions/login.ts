@@ -1,6 +1,6 @@
 // Named export only
 'use server';
-import { loginSchema, RoleEnum, type LoginInput, type Role } from '@energy-platform/zod-schemas';
+import { loginSchema, RoleEnum, type LoginInput, type Role } from '@invictus/zod-schemas';
 import { cookies } from 'next/headers';
 
 /**
