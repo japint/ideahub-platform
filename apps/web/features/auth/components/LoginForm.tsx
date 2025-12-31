@@ -4,7 +4,7 @@ import * as React from 'react';
 import { useFormState } from 'react-dom';
 import { loginAction } from '@/features/auth/actions/login';
 import { Input, Button } from '@invictus/ui';
-import { loginSchema } from '@energy-platform/zod-schemas';
+import { loginSchema } from '@invictus/zod-schemas';
 
 export function LoginForm() {
   const [state, formAction] = useFormState(loginAction, { success: false, error: {} });
